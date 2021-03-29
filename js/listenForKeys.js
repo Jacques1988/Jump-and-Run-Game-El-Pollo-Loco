@@ -4,13 +4,13 @@ function listenForKeys() {
         let k = e.key;
 
         if (k == 'ArrowRight') {
-            isMovingRight = true;
-            offsetBackground_x = offsetBackground_x - GAME_SPEED;
+            isMovingRight = true;  
+            movingBackground = movingBackground - GAME_SPEED;
         }
 
-        if (k == 'ArrowLeft' && offsetBackground_x < 0) {
+        if (k == 'ArrowLeft' && movingBackground< 0) {
             isMovingLeft = true;
-            offsetBackground_x = offsetBackground_x + GAME_SPEED;
+            movingBackground = movingBackground + GAME_SPEED;
         }
         
         let jumpTimePassed = new Date().getTime() - startJumpTime;
@@ -31,7 +31,4 @@ function listenForKeys() {
             isMovingLeft = false;
         }
     });
-
-
-
 }
