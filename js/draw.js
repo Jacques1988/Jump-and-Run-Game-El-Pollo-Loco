@@ -1,7 +1,10 @@
-function draw(){
+function draw(){    
     addBackground();
     addGround();
+    drawEnemies();
     updateCharacter();
     addClouds();
-    requestAnimationFrame(draw);
+    
+    requestAnimationFrame(draw); 
+    
 }
