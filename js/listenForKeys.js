@@ -16,13 +16,12 @@ function listenForKeys() {
         let jumpTimePassed = new Date().getTime() - startJumpTime;
 
         if (e.code == 'Space' && jumpTimePassed > JUMP_TIME * 2) {
+            AUDIO_JUMPING.play();
             startJumpTime = new Date().getTime();
             jump = true;
-            /* checkForJumping(); */
-            console.log(jump);
+            /* checkForJumping();  */
+            
         }
-
-
     });
 
     document.addEventListener('keyup', e => {

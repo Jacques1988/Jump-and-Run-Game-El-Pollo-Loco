@@ -18,10 +18,15 @@ let movingBackground = 0;
 let cloudOffset_x = 0;
 
 let enemies = [];
+let enemy_x;
 let enemy_y = 445;
 
 let GAME_SPEED = 8;
 let JUMP_TIME = 300;
+
+let GAME_MUSIC = new Audio('./audio/luckyChicken.mp3');
+let AUDIO_RUNNING = new Audio('./audio/running.mp3');
+let AUDIO_JUMPING = new Audio('./audio/jump.mp3');
 
 
 function init() {
@@ -31,14 +36,24 @@ function init() {
     ctx.fillStyle = 'whitesmoke';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    draw();
+    GAME_MUSIC.play();
     cloudOffset();
     listenForKeys();
     checkForRunning();
     createEnemyList();
+    calculateEnemyposition(); 
+    draw();
+    
+    
 }
 
+
+ 
+
+
+
 //characterJumpIndex kumuliert sich. Sequenzen werden bei dem 2. Sprung unsauber
+
 /* function checkForJumping() {
 setInterval(function(){
 
@@ -48,12 +63,13 @@ setInterval(function(){
             characterJumpIndex = characterJumpIndex + 1;
             if(characterJumpIndex > isJumping.length){
                 index = 0 ;
+                
             }
         }
         if (character_y == 235) {
             jump = false;
         }
-    },133);
+    },50);
     console.log(characterJumpIndex);
-    requestAnimationFrame(checkForJumping);
-    } */
+     requestAnimationFrame(checkForJumping); 
+    }  */

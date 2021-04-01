@@ -6,7 +6,7 @@
 
 function drawEnemies() {
     for (let i = 0; i < enemies.length; i++) {
-        let enemy = enemies[i];
+        enemy = enemies[i];
         addEnemies(enemy.img, enemy.enemy_x, enemy.enemy_y, enemy.scale);
     }
 } 
@@ -14,8 +14,8 @@ function drawEnemies() {
 function createEnemyList(type, enemy_x) {
     enemies = [
         
-        createChicken(1,1700),
-        createChicken(2,1900),
+        createChicken(1,800),
+        createChicken(2,1100),
         createChicken(1,2700),
         createChicken(2,3300),
         createChicken(2,4000),
@@ -28,6 +28,24 @@ function createEnemyList(type, enemy_x) {
         createChicken(2,8400),
         createChicken(1,9000),
         createChicken(2,9900),
-        createChicken(1,10000)
+        createChicken(1,10000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000),
+        createChicken(1,15000),
+        createChicken(2,15000)
     ];
 }
