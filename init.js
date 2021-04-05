@@ -15,9 +15,10 @@ let characterJumpIndex = 0;
 let startJumpTime = 0;
 
 let currentEnergyBarImage = 'img/7.Marcadores/Barra/Marcador vida/verde/100_.PNG';
-let energyBar = ['img/7.Marcadores/Barra/Marcador vida/verde/100_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/80_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/60_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/40_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/20_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/0_.PNG']; 
+let energyBar = ['img/7.Marcadores/Barra/Marcador vida/verde/100_.PNG', 'img/7.Marcadores/Barra/Marcador vida/verde/80_.PNG', 'img/7.Marcadores/Barra/Marcador vida/verde/60_.PNG', 'img/7.Marcadores/Barra/Marcador vida/verde/40_.PNG', 'img/7.Marcadores/Barra/Marcador vida/verde/20_.PNG', 'img/7.Marcadores/Barra/Marcador vida/verde/0_.PNG'];
 let energyBar_x = 40;
 let energyBar_y = 0;
+let energybarGraphicIndex = 0;
 
 let movingBackground = 0;
 let cloudOffset_x = 0;
@@ -26,6 +27,14 @@ let enemies = [];
 let enemy_x;
 let enemy_y = 445;
 
+let availableTabasco = ['img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/20_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/40_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/60_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/80_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/100_.PNG'];
+let placeTabasco = [800, 1200, 1500, 2600, 3400, 4100, 4500, 5300, 5200, 5500, 6700, 7300, 8000, 8400, 8800];
+/* let tabasco_x ; */
+let tabasco_y = 445;
+let currentBottles = 0;
+let currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG'
+let tabascoBarGraphicIncex = 0 ;
+
 let GAME_SPEED = 8;
 let JUMP_TIME = 400;
 
@@ -33,27 +42,34 @@ let GAME_MUSIC = new Audio('./audio/luckyChicken.mp3');
 let AUDIO_RUNNING = new Audio('./audio/running.mp3');
 let AUDIO_JUMPING = new Audio('./audio/jump.mp3');
 let AUDIO_PAIN = new Audio('./audio/pain.mp3');
+let AUDIO_TAKEBOTTLE = new Audio('./audio/corkbottle.mp3');
 
 GAME_MUSIC.loop = true;
 GAME_MUSIC.volume = 0.5;
 
 
 function init() {
+
+    /* GAME_MUSIC.play(); */
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
 
     ctx.fillStyle = 'whitesmoke';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    /* GAME_MUSIC.play(); */
+
     cloudOffset();
     collisionDetection();
+    takeBottles();
     listenForKeys();
     checkForRunning();
     createEnemyList();
     calculateEnemyposition();
     draw();
+
 }
+
+
 
 
 //characterJumpIndex kumuliert sich. Sequenzen werden bei dem 2. Sprung unsauber
