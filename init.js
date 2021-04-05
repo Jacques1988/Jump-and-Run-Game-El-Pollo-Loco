@@ -14,6 +14,11 @@ let characterGraphicIndex = 0;
 let characterJumpIndex = 0;
 let startJumpTime = 0;
 
+let currentEnergyBarImage = 'img/7.Marcadores/Barra/Marcador vida/verde/100_.PNG';
+let energyBar = ['img/7.Marcadores/Barra/Marcador vida/verde/100_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/80_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/60_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/40_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/20_.PNG','img/7.Marcadores/Barra/Marcador vida/verde/0_.PNG']; 
+let energyBar_x = 40;
+let energyBar_y = 0;
+
 let movingBackground = 0;
 let cloudOffset_x = 0;
 
@@ -22,11 +27,15 @@ let enemy_x;
 let enemy_y = 445;
 
 let GAME_SPEED = 8;
-let JUMP_TIME = 300;
+let JUMP_TIME = 400;
 
 let GAME_MUSIC = new Audio('./audio/luckyChicken.mp3');
 let AUDIO_RUNNING = new Audio('./audio/running.mp3');
 let AUDIO_JUMPING = new Audio('./audio/jump.mp3');
+let AUDIO_PAIN = new Audio('./audio/pain.mp3');
+
+GAME_MUSIC.loop = true;
+GAME_MUSIC.volume = 0.5;
 
 
 function init() {
@@ -36,20 +45,15 @@ function init() {
     ctx.fillStyle = 'whitesmoke';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    GAME_MUSIC.play();
+    /* GAME_MUSIC.play(); */
     cloudOffset();
+    collisionDetection();
     listenForKeys();
     checkForRunning();
     createEnemyList();
-    calculateEnemyposition(); 
+    calculateEnemyposition();
     draw();
-    
-    
 }
-
-
- 
-
 
 
 //characterJumpIndex kumuliert sich. Sequenzen werden bei dem 2. Sprung unsauber
@@ -63,7 +67,7 @@ setInterval(function(){
             characterJumpIndex = characterJumpIndex + 1;
             if(characterJumpIndex > isJumping.length){
                 index = 0 ;
-                
+
             }
         }
         if (character_y == 235) {
@@ -71,5 +75,5 @@ setInterval(function(){
         }
     },50);
     console.log(characterJumpIndex);
-     requestAnimationFrame(checkForJumping); 
+     requestAnimationFrame(checkForJumping);
     }  */

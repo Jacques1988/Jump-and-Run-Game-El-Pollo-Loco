@@ -7,7 +7,7 @@ function addEnemies(src, enemy_x, enemy_y, scale){
     if(base_image.complete){
         ctx.drawImage(base_image, enemy_x + movingBackground, enemy_y, base_image.width * scale, base_image.height * scale);
     }
-   /*  console.log(random_Enemie_X); */
+   
    
 } 
  
@@ -15,7 +15,7 @@ function createChicken(type, enemy_x) {
     return {
         "img": "img/enemies/chickens/1.chicken"+ type +".PNG",
         "enemy_x": enemy_x,
-        "enemy_y": 445,
+        "enemy_y": enemy_y,
         "scale": 0.35,
         "speed": Math.random() * 5
     };

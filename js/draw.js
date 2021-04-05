@@ -4,7 +4,6 @@ function draw(){
     drawEnemies();
     updateCharacter();
     addClouds();
-    
-    requestAnimationFrame(draw); 
-    
+    addEnergyBar(); 
+    requestAnimationFrame(draw);
 }

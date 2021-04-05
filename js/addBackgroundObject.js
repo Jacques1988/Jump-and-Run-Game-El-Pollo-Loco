@@ -9,3 +9,5 @@ function addBackgroundObject(src, offset_x, offset_y, scale, opacity){
         ctx.drawImage(base_Image, offset_x + movingBackground, offset_y, canvas.width * scale, canvas.height * scale);
     }
 }
+
+
