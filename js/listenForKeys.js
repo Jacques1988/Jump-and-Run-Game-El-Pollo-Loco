@@ -20,7 +20,15 @@ function listenForKeys() {
             startJumpTime = new Date().getTime();
             jump = true;
             /* checkForJumping();  */
-            
+        }
+
+        if (k == 'd' && currentBottles > 0) {
+            let timepassed = new Date().getTime() - bottleThrowTime;
+            if (timepassed > 1000) {
+                currentBottles--;
+                bottleThrowTime = new Date().getTime();
+                console.log(throwBottle_x);
+            }
         }
     });
 

@@ -27,13 +27,19 @@ let enemies = [];
 let enemy_x;
 let enemy_y = 445;
 
-let availableTabasco = ['img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/20_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/40_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/60_.PNG','img/7.Marcadores/Barra/Marcador_botella/Verde/80_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/100_.PNG'];
+let availableTabasco = ['img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/20_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/40_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/60_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/80_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/100_.PNG'];
 let placeTabasco = [800, 1200, 1500, 2600, 3400, 4100, 4500, 5300, 5200, 5500, 6700, 7300, 8000, 8400, 8800];
-/* let tabasco_x ; */
 let tabasco_y = 445;
-let currentBottles = 0;
+let currentBottles = 50;
 let currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG'
-let tabascoBarGraphicIncex = 0 ;
+let tabascoBarGraphicIncex = 0;
+
+let bottleThrowTime = 0;
+let throwBottle_x;
+let throwbottle_y;
+
+let boss_x = 900;
+
 
 let GAME_SPEED = 8;
 let JUMP_TIME = 400;
@@ -65,9 +71,13 @@ function init() {
     checkForRunning();
     createEnemyList();
     calculateEnemyposition();
+    bottleCollision();
     draw();
 
 }
+
+
+
 
 
 

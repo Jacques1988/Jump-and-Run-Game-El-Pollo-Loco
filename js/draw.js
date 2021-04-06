@@ -7,7 +7,9 @@ function draw(){
     addClouds();
     addEnergyBar(); 
     drawCountbottles();
-    
+    throwBottle();
+    addchickenBoss();
+    addBossEnergy();
     requestAnimationFrame(draw);
 }
 
