@@ -27,7 +27,6 @@ function listenForKeys() {
             if (timepassed > 1000) {
                 currentBottles--;
                 bottleThrowTime = new Date().getTime();
-                console.log(throwBottle_x);
             }
         }
     });

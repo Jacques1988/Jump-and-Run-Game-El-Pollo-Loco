@@ -10,6 +10,8 @@ function draw(){
     throwBottle();
     addchickenBoss();
     addBossEnergy();
+    
+    
     requestAnimationFrame(draw);
 }
 

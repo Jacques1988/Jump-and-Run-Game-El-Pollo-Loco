@@ -35,8 +35,9 @@ let currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG'
 let tabascoBarGraphicIncex = 0;
 
 let bottleThrowTime = 0;
-let throwBottle_x;
-let throwbottle_y;
+let throwBottle_x = 0;
+let throwBottle_y = 0;
+
 
 let boss_x = 900;
 
@@ -71,14 +72,9 @@ function init() {
     checkForRunning();
     createEnemyList();
     calculateEnemyposition();
-    bottleCollision();
     draw();
-
+    
 }
-
-
-
-
 
 
 

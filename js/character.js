@@ -15,5 +15,7 @@ function updateCharacter() {
             }
         }
     }
+    requestAnimationFrame(updateCharacter); // funktioniert nicht 
+    
 }
 
