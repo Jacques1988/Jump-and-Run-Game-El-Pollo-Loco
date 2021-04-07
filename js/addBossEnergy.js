@@ -2,9 +2,9 @@
 
 function addBossEnergy() {
     let BossEnergy = new Image();
-    BossEnergy.src = 'img/7.Marcadores/Marcadorvida_enemy/Vede.png';
+    BossEnergy.src = currentBossEnergy;
     if (BossEnergy.complete) {
-        ctx.drawImage(BossEnergy, boss_x, 0, BossEnergy.width * 0.5, BossEnergy.height * 0.5);
+        ctx.drawImage(BossEnergy, boss_x + movingBackground, 0, BossEnergy.width * 0.5, BossEnergy.height * 0.5);
     }
 }
 

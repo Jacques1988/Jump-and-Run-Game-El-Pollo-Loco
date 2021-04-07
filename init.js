@@ -30,7 +30,7 @@ let enemy_y = 445;
 let availableTabasco = ['img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/20_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/40_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/60_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/80_.PNG', 'img/7.Marcadores/Barra/Marcador_botella/Verde/100_.PNG'];
 let placeTabasco = [800, 1200, 1500, 2600, 3400, 4100, 4500, 5300, 5200, 5500, 6700, 7300, 8000, 8400, 8800];
 let tabasco_y = 445;
-let currentBottles = 50;
+let currentBottles = 0;
 let currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG'
 let tabascoBarGraphicIncex = 0;
 
@@ -39,8 +39,11 @@ let throwBottle_x = 0;
 let throwBottle_y = 0;
 
 
-let boss_x = 900;
-
+let boss_x = 9000;
+let bossEnergy = ['img/7.Marcadores/Marcadorvida_enemy/Vede.PNG','img/7.Marcadores/Marcadorvida_enemy/Azul.PNG', 'img/7.Marcadores/Marcadorvida_enemy/Naranja.PNG'];
+let currentBossEnergy = 'img/7.Marcadores/Marcadorvida_enemy/Vede.PNG';
+let hit = 0;
+let bossEnergyGraphicIndex = 0;
 
 let GAME_SPEED = 8;
 let JUMP_TIME = 400;

@@ -9,7 +9,7 @@ function throwBottle() {
         baseImage.src = 'img/7.Marcadores/Icono/Botella.png';
         if(baseImage.complete){
             ctx.drawImage(baseImage, throwBottle_x, throwBottle_y, baseImage.width *0.5, baseImage.height *0.5);
-            bottleCollision(throwBottle_x);
+            bottleCollision(throwBottle_x, throwBottle_y);
         }
     }
 }
