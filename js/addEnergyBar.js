@@ -7,6 +7,6 @@ function addEnergyBarObject(currentEnergyBarImage ,energyBar_x, energyBar_y, sca
 }
 
 function addEnergyBar(){
-    addEnergyBarObject(currentEnergyBarImage, energyBar_x, energyBar_y, 0.5);
+    addEnergyBarObject(currentEnergyBarImage, energyBar_x, energyBar_y, 0.4);
 }  
 

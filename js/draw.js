@@ -3,15 +3,14 @@ function draw(){
     addGround();
     drawTabasco();
     drawEnemies();
-    updateCharacter();
+    updateCharacter(); 
     addClouds();
     addEnergyBar(); 
     drawCountbottles();
     throwBottle();
     addchickenBoss();
     addBossEnergy();
-    
-    
+
     requestAnimationFrame(draw);
 }
 

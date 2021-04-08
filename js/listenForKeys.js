@@ -24,11 +24,12 @@ function listenForKeys() {
 
         if (k == 'd' && currentBottles > 0) {
             let timepassed = new Date().getTime() - bottleThrowTime;
-            if (timepassed > 1000) {
+            if (timepassed > 1000 && character_y == 235) {
                 currentBottles--;
                 bottleThrowTime = new Date().getTime();
-            }
+                decrementBottleGraphic();
         }
+    }
     });
 
     document.addEventListener('keyup', e => {

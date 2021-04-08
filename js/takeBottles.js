@@ -11,16 +11,7 @@ function takeBottles() {
                     placeTabasco.splice(i, 1);
                     AUDIO_TAKEBOTTLE.play();
                     currentBottles++;
-                    
-                    let index = tabascoBarGraphicIncex % availableTabasco.length;
-                    currentTabasco = availableTabasco[index];
-                    tabascoBarGraphicIncex = tabascoBarGraphicIncex + 1;
-                    if(currentBottles > 6 ){
-                        currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/100_.PNG';
-                        if(currentTabasco < 0){
-                            currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG';
-                        }
-                    }
+                    incrementBottleGraphic();
                 }
             }
         }

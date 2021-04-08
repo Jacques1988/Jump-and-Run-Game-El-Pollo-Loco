@@ -32,7 +32,7 @@ let placeTabasco = [800, 1200, 1500, 2600, 3400, 4100, 4500, 5300, 5200, 5500, 6
 let tabasco_y = 445;
 let currentBottles = 0;
 let currentTabasco = 'img/7.Marcadores/Barra/Marcador_botella/Verde/0_.PNG'
-let tabascoBarGraphicIncex = 0;
+let tabascoBarGraphicIndex = 1;
 
 let bottleThrowTime = 0;
 let throwBottle_x = 0;
@@ -40,7 +40,7 @@ let throwBottle_y = 0;
 
 
 let boss_x = 9000;
-let bossEnergy = ['img/7.Marcadores/Marcadorvida_enemy/Vede.PNG','img/7.Marcadores/Marcadorvida_enemy/Azul.PNG', 'img/7.Marcadores/Marcadorvida_enemy/Naranja.PNG'];
+let bossEnergy = ['img/7.Marcadores/Marcadorvida_enemy/Vede.PNG', 'img/7.Marcadores/Marcadorvida_enemy/Azul.PNG', 'img/7.Marcadores/Marcadorvida_enemy/Naranja.PNG'];
 let currentBossEnergy = 'img/7.Marcadores/Marcadorvida_enemy/Vede.PNG';
 let hit = 0;
 let bossEnergyGraphicIndex = 0;
@@ -76,9 +76,8 @@ function init() {
     createEnemyList();
     calculateEnemyposition();
     draw();
-    
-}
 
+}
 
 
 //characterJumpIndex kumuliert sich. Sequenzen werden bei dem 2. Sprung unsauber
