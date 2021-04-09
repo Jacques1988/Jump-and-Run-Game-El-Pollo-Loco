@@ -6,11 +6,16 @@ function listenForKeys() {
         if (k == 'ArrowRight') {
             isMovingRight = true;
             movingBackground = movingBackground - GAME_SPEED;
+            if(movingBackground < -8400){
+                movingBackground = -8400;
+            }
+            console.log(movingBackground);
         }
 
         if (k == 'ArrowLeft' && movingBackground < 0) {
             isMovingLeft = true;
             movingBackground = movingBackground + GAME_SPEED;
+           
         }
 
         let jumpTimePassed = new Date().getTime() - startJumpTime;

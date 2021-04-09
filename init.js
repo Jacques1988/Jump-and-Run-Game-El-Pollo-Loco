@@ -76,7 +76,6 @@ function init() {
     createEnemyList();
     calculateEnemyposition();
     draw();
-
 }
 
 

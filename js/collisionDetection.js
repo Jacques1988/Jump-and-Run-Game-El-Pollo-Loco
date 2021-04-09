@@ -25,5 +25,5 @@ function collisionDetection() {
         }
 
 
-    }, 200);
+    }, 300);
 }
