@@ -8,6 +8,7 @@ function drawEnemies() {
     for (let i = 0; i < enemies.length; i++) {
         enemy = enemies[i];
         addEnemies(enemy.img, enemy.enemy_x, enemy.enemy_y, enemy.scale);
+        /* console.log(enemy.enemy_x); */
     }
 } 
 

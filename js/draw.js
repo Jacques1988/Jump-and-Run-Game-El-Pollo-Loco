@@ -2,6 +2,7 @@ function draw(){
     addBackground();
     addGround();
     drawTabasco();
+    drawHearts();
     drawEnemies();
     updateCharacter(); 
     addClouds();

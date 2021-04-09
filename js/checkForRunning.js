@@ -1,6 +1,6 @@
 function checkForRunning(){
     
-    setInterval(function(){ 
+    setInterval(function(){  
 
     
         if(isMovingRight){
@@ -19,6 +19,7 @@ function checkForRunning(){
                 characterGraphicIndex = characterGraphicIndex = 0;
             }
         }
-     },100); 
-          /* requestAnimationFrame(checkForRunning); */   
+     },100);  
+              
+          
 }

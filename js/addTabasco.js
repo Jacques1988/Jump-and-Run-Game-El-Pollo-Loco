@@ -12,7 +12,6 @@ function drawTabasco(){
         let tabasco_x = placeTabasco[i];
 
         addTabasco('img/7.Marcadores/Icono/Botella.png', tabasco_x, tabasco_y, 0.5);
-    
     }
 }
 

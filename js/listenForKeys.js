@@ -9,13 +9,11 @@ function listenForKeys() {
             if(movingBackground < -8400){
                 movingBackground = -8400;
             }
-            console.log(movingBackground);
         }
 
         if (k == 'ArrowLeft' && movingBackground < 0) {
             isMovingLeft = true;
-            movingBackground = movingBackground + GAME_SPEED;
-           
+            movingBackground = movingBackground + GAME_SPEED;   
         }
 
         let jumpTimePassed = new Date().getTime() - startJumpTime;
@@ -24,7 +22,6 @@ function listenForKeys() {
             AUDIO_JUMPING.play();
             startJumpTime = new Date().getTime();
             jump = true;
-            /* checkForJumping();  */
         }
 
         if (k == 'd' && currentBottles > 0) {
@@ -42,10 +39,12 @@ function listenForKeys() {
 
         if (k == 'ArrowRight') {
             isMovingRight = false;
+            currentCharacterImage = 'img/2.Secuencias_Personaje-Pepe-corrección/1.IDLE/IDLE/I-1.PNG'
         }
 
         if (k == 'ArrowLeft') {
             isMovingLeft = false;
+            currentCharacterImage = 'img/2.Secuencias_Personaje-Pepe-corrección/1.IDLE/IDLE/I-1.PNG';
         }
     });
 }

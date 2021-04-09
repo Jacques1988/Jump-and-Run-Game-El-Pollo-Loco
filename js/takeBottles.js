@@ -1,7 +1,5 @@
 function takeBottles() {
     //take tabasco bottles
-
-    /*********************Warum muss man + movingBackground einfügen ? Nicht ganz verstanden */
     setInterval(function () {
         for (let i = 0; i < placeTabasco.length; i++) {
             let tabasco_x = placeTabasco[i] + movingBackground;
