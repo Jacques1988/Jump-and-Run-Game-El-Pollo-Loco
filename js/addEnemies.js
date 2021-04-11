@@ -7,8 +7,6 @@ function addEnemies(src, enemy_x, enemy_y, scale){
     if(base_image.complete){
         ctx.drawImage(base_image, enemy_x + movingBackground, enemy_y, base_image.width * scale, base_image.height * scale);
     }
-   
-   
 } 
  
 function createChicken(type, enemy_x) {
