@@ -58,6 +58,8 @@ let AUDIO_RUNNING = new Audio('./audio/running.mp3');
 let AUDIO_JUMPING = new Audio('./audio/jump.mp3');
 let AUDIO_PAIN = new Audio('./audio/pain.mp3');
 let AUDIO_TAKEBOTTLE = new Audio('./audio/corkbottle.mp3');
+let AUDIO_THROWBOTTLE = new Audio('./audio/attack.mp3');
+let AUDIO_BOTTLESPLASH = new Audio('./audio/glass_smash.mp3');
 let AUDIO_YEAH = new Audio('./audio/yeah.mp3');
 
 GAME_MUSIC.loop = true;
@@ -65,7 +67,7 @@ GAME_MUSIC.volume = 0.5;
 
 function init() {
 
-    /* GAME_MUSIC.play(); */
+    GAME_MUSIC.play();
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
 

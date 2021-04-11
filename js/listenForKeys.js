@@ -29,6 +29,7 @@ function listenForKeys() {
             if (timepassed > 1000 && character_y == 235) {
                 currentBottles--;
                 bottleThrowTime = new Date().getTime();
+                AUDIO_THROWBOTTLE.play();
                 decrementBottleGraphic();
         }
     }
@@ -40,11 +41,13 @@ function listenForKeys() {
         if (k == 'ArrowRight') {
             isMovingRight = false;
             currentCharacterImage = 'img/2.Secuencias_Personaje-Pepe-corrección/1.IDLE/IDLE/I-1.PNG'
+            AUDIO_RUNNING.pause();
         }
 
         if (k == 'ArrowLeft') {
             isMovingLeft = false;
             currentCharacterImage = 'img/2.Secuencias_Personaje-Pepe-corrección/1.IDLE/IDLE/I-1.PNG';
+            AUDIO_RUNNING.pause();
         }
     });
 }
