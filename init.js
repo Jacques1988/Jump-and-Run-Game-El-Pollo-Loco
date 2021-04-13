@@ -47,8 +47,11 @@ let currentLive = 5;
 let boss_x = 9000;
 let bossEnergy = ['img/7.Marcadores/Marcadorvida_enemy/Vede.PNG', 'img/7.Marcadores/Marcadorvida_enemy/Azul.PNG', 'img/7.Marcadores/Marcadorvida_enemy/Naranja.PNG'];
 let currentBossEnergy = 'img/7.Marcadores/Marcadorvida_enemy/Vede.PNG';
+let currentBossImage = ['img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G5.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G6.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G7.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G8.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G9.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G10.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G11.PNG','img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/2.Ateción-ataque/1.Alerta/G12.PNG'];
+let currentBoss = 'img/4.Secuencias_Enemy_gigantón-Doña_Gallinota-/1.Caminata/G2.PNG';
 let hit = 0;
 let bossEnergyGraphicIndex = 0;
+let BossImageIndex = 0;
 
 let GAME_SPEED = 8;
 let JUMP_TIME = 400;
@@ -67,7 +70,7 @@ GAME_MUSIC.volume = 0.5;
 
 function init() {
 
-    GAME_MUSIC.play();
+    /* GAME_MUSIC.play(); */
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
 
@@ -79,11 +82,12 @@ function init() {
     enemyCollision();
     takeBottles();
     takeHearts();
-    listenForKeys();
+    /* updateActions(); */ // funktioniert, allerdings nicht mit erwünschter Korrektur
+    listenForKeys(); 
     checkForRunning();
     createEnemyList();
     calculateEnemyposition();
-    /* killEnemies();  */
+    
     
     draw();
 
