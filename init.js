@@ -87,10 +87,8 @@ function init() {
     checkForRunning();
     createEnemyList();
     calculateEnemyposition();
-    
-    
+    updateChickenBossImage();
     draw();
 
 }
-
 
